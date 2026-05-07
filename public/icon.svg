@@ -5,13 +5,12 @@
       <stop offset="100%" stop-color="#ecdfc1"/>
     </linearGradient>
   </defs>
-  <rect width="512" height="512" rx="84" fill="url(#bg)"/>
-  <rect x="36" y="36" width="440" height="440" rx="60" fill="none" stroke="#211a14" stroke-width="8"/>
-  <!-- Stylized "CDMX" mark -->
-  <g fill="#211a14" font-family="Georgia, serif" font-weight="700">
-    <text x="256" y="240" text-anchor="middle" font-size="170" font-style="italic" fill="#b8553a">CDMX</text>
-    <text x="256" y="330" text-anchor="middle" font-size="44" letter-spacing="14" fill="#4a3d2f">FIELD GUIDE</text>
-  </g>
-  <!-- Star home marker -->
-  <text x="256" y="420" text-anchor="middle" font-size="64" fill="#b8553a">★</text>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <rect x="48" y="48" width="416" height="416" rx="64" fill="none" stroke="#211a14" stroke-width="9"/>
+  <text x="256" y="290" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-style="italic" font-weight="700"
+        font-size="150" fill="#b8553a">CDMX</text>
+  <text x="256" y="395" text-anchor="middle"
+        font-family="Georgia, serif" font-size="72" fill="#b8553a">★</text>
 </svg>

@@ -10,7 +10,16 @@ export default defineConfig({
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg', 'icon-maskable.svg', 'data/*.json', 'data/*.geojson'],
+      includeAssets: [
+        'icon.svg',
+        'icon-maskable.svg',
+        'apple-touch-icon.png',
+        'icon-192.png',
+        'icon-512.png',
+        'icon-512-maskable.png',
+        'data/*.json',
+        'data/*.geojson'
+      ],
       manifest: {
         name: 'CDMX — A Field Guide',
         short_name: 'CDMX',
@@ -18,11 +27,14 @@ export default defineConfig({
         theme_color: '#b8553a',
         background_color: '#f4ead5',
         display: 'standalone',
+        orientation: 'portrait',
         start_url: '.',
         scope: '.',
         icons: [
-          { src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' },
-          { src: 'icon-maskable.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'maskable' }
+          { src: 'icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+          { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+          { src: 'icon-512-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          { src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }
         ]
       },
       workbox: {
