@@ -1,0 +1,633 @@
+/* ============================================================
+   CDMX Field Guide — editorial travel-zine aesthetic
+   ============================================================ */
+
+:root {
+  /* Paper + ink */
+  --cream: #f4ead5;
+  --cream-deep: #ecdfc1;
+  --paper: #fbf5e6;
+  --ink: #211a14;
+  --ink-soft: #4a3d2f;
+  --ink-faint: #7a6a55;
+  --rule: #c9b78f;
+
+  /* Accents */
+  --rust: #b8553a;
+  --rust-deep: #8a3a23;
+  --ochre: #d39a3a;
+  --ochre-deep: #9c6f1f;
+  --jade: #4f8a6a;
+  --jade-deep: #355f49;
+  --plum: #7a4a6e;
+  --plum-deep: #563249;
+
+  /* Rating fills (lower opacity overlays — actual fillOpacity set in JS) */
+  --rating-safe: var(--jade);
+  --rating-moderate: var(--ochre);
+  --rating-daytrip: var(--plum);
+  --rating-avoid: var(--rust);
+
+  /* Type scale */
+  --serif: "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image:
+    /* paper grain — repeating SVG noise */
+    url("./grain.svg"),
+    radial-gradient(circle at 0% 0%, rgba(184, 85, 58, 0.06), transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(79, 138, 106, 0.05), transparent 45%);
+  background-attachment: fixed;
+  background-size: 220px 220px, auto, auto;
+  background-blend-mode: multiply, normal, normal;
+  min-height: 100vh;
+}
+
+a { color: var(--rust-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+
+/* ============================================================
+   Layout
+   ============================================================ */
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 28px 56px;
+}
+
+@media (max-width: 720px) {
+  #app { padding: 20px 16px 40px; }
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 12px 28px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.page-header h1 {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0;
+  font-variation-settings: "opsz" 144;
+}
+
+.page-header h1 .accent {
+  color: var(--rust);
+  font-style: italic;
+  font-weight: 500;
+  font-variation-settings: "opsz" 144;
+}
+
+.page-header .kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 6px;
+}
+
+.page-header .meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: right;
+  line-height: 1.6;
+}
+
+.page-header .meta strong {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+@media (max-width: 720px) {
+  .page-header { grid-template-columns: 1fr; }
+  .page-header .meta { text-align: left; }
+}
+
+/* Legend strip */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  align-items: center;
+  padding: 14px 0 22px;
+  border-bottom: 1px dashed var(--rule);
+  margin-bottom: 28px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.legend-item { display: inline-flex; align-items: center; gap: 8px; }
+.legend-swatch {
+  width: 18px; height: 18px; border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.18);
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.15);
+}
+.legend-swatch--safe     { background: var(--jade);  }
+.legend-swatch--moderate { background: var(--ochre); }
+.legend-swatch--daytrip  { background: var(--plum);  }
+.legend-swatch--avoid    { background: var(--rust);  }
+.legend-star {
+  font-size: 14px;
+  color: var(--rust);
+}
+
+/* Two-column main */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   Map frame — hard offset shadow, vintage card feel
+   ============================================================ */
+
+.map-frame {
+  position: relative;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--ink);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  .map-frame { box-shadow: 6px 6px 0 var(--ink); }
+}
+
+#map {
+  width: 100%;
+  height: 640px;
+  background: var(--cream-deep);
+}
+
+@media (max-width: 720px) {
+  #map { height: 500px; }
+}
+
+/* Mute the base tiles even further — overlay does the work */
+.leaflet-tile-pane {
+  filter: grayscale(0.45) sepia(0.18) saturate(0.85) brightness(1.02) contrast(0.96);
+}
+
+/* Subtle warm wash over the map */
+.map-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 60%, rgba(184, 85, 58, 0.06) 100%);
+  mix-blend-mode: multiply;
+  z-index: 400;
+}
+
+/* Leaflet attribution restyle to match aesthetic */
+.leaflet-control-attribution {
+  background: rgba(251, 245, 230, 0.82) !important;
+  font-family: var(--mono) !important;
+  font-size: 9.5px !important;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint) !important;
+  padding: 2px 7px !important;
+  border-top-left-radius: 4px;
+}
+.leaflet-control-attribution a {
+  color: var(--ink-soft) !important;
+  text-decoration: none;
+}
+
+.leaflet-control-zoom {
+  border: 1.2px solid var(--ink) !important;
+  box-shadow: 3px 3px 0 var(--ink) !important;
+  border-radius: 2px !important;
+  overflow: hidden;
+}
+.leaflet-control-zoom a {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  font-family: var(--serif) !important;
+  font-weight: 600;
+  border-bottom-color: var(--rule) !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--cream-deep) !important;
+}
+
+/* ============================================================
+   Custom pin marker
+   ============================================================ */
+
+.pin {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  position: relative;
+}
+
+.pin::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pin:hover {
+  transform: translate(-1px, -1px) scale(1.08);
+}
+.pin:hover::after {
+  animation: pin-pulse 1.1s ease-out infinite;
+}
+
+@keyframes pin-pulse {
+  0%   { opacity: 0.6; transform: scale(1); }
+  100% { opacity: 0;   transform: scale(1.6); }
+}
+
+.pin--eat      { color: var(--rust);  }
+.pin--drink    { color: var(--plum);  }
+.pin--culture  { color: var(--jade);  }
+.pin--landmark { color: var(--ochre-deep); }
+.pin--park     { color: var(--jade-deep); }
+.pin--market   { color: var(--rust-deep); }
+.pin--view     { color: var(--ink-soft); }
+
+.pin.pin--selected {
+  transform: scale(1.18);
+  background: currentColor;
+  color: var(--paper);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.pin.pin--selected .pin-glyph { color: var(--paper); }
+
+.pin-glyph {
+  font-style: normal;
+  line-height: 1;
+  color: currentColor;
+}
+
+/* Home-base star for Roma Norte center */
+.home-marker {
+  width: 0; height: 0;
+  display: grid; place-items: center;
+}
+.home-marker .star {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--rust);
+  text-shadow:
+    -1.5px 0 var(--paper), 1.5px 0 var(--paper),
+    0 -1.5px var(--paper), 0 1.5px var(--paper),
+    2px 2px 0 var(--ink);
+  font-weight: 800;
+  transform: translate(-50%, -50%);
+}
+
+/* ============================================================
+   Geolocation
+   ============================================================ */
+
+.locate-btn {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  z-index: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--paper);
+  border: 1.2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  border-radius: 2px;
+  padding: 8px 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.locate-btn:hover { background: var(--cream-deep); }
+.locate-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+.locate-btn .dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--rust);
+  box-shadow: 0 0 0 3px rgba(184, 85, 58, 0.25);
+}
+.locate-btn[data-state="active"] .dot {
+  background: var(--jade);
+  box-shadow: 0 0 0 3px rgba(79, 138, 106, 0.3);
+  animation: locate-pulse 1.6s ease-out infinite;
+}
+.locate-btn[data-state="error"] .dot {
+  background: var(--ink-faint);
+}
+
+@keyframes locate-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(79, 138, 106, 0.45); }
+  100% { box-shadow: 0 0 0 14px rgba(79, 138, 106, 0); }
+}
+
+.user-dot {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--jade);
+  border: 2.5px solid var(--paper);
+  box-shadow: 0 0 0 1.5px var(--jade-deep), 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.user-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--jade);
+  opacity: 0;
+  animation: user-pulse 2s ease-out infinite;
+}
+
+@keyframes user-pulse {
+  0%   { opacity: 0.55; transform: scale(0.6); }
+  100% { opacity: 0;    transform: scale(2.0); }
+}
+
+/* ============================================================
+   Sidebar
+   ============================================================ */
+
+.sidebar {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--ink);
+  border-radius: 2px;
+  padding: 28px 26px 30px;
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
+}
+
+@media (max-width: 980px) {
+  .sidebar {
+    position: static;
+    max-height: none;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+}
+
+.sidebar-kicker {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 10px;
+}
+
+.sidebar-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1.05;
+  margin: 0 0 14px;
+  font-variation-settings: "opsz" 96;
+}
+
+.sidebar-title .home-glyph {
+  display: inline-block;
+  color: var(--rust);
+  font-style: normal;
+  margin-right: 6px;
+  transform: translateY(-2px);
+}
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+
+.tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 2px;
+  border: 1px solid currentColor;
+  background: transparent;
+}
+.tag--safe     { color: var(--jade-deep);  background: rgba(79, 138, 106, 0.13); }
+.tag--moderate { color: var(--ochre-deep); background: rgba(211, 154, 58, 0.18); }
+.tag--daytrip  { color: var(--plum-deep);  background: rgba(122, 74, 110, 0.14); }
+.tag--avoid    { color: var(--rust-deep);  background: rgba(184, 85, 58, 0.14); }
+
+.tag--cat {
+  color: var(--ink-soft);
+  background: var(--cream-deep);
+  border-color: var(--rule);
+}
+
+.tag--home {
+  background: var(--rust);
+  color: var(--paper);
+  border-color: var(--rust);
+}
+
+.tag--distance {
+  color: var(--ink-soft);
+  background: var(--cream);
+  border-color: var(--rule);
+}
+
+.sidebar-blurb {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0 0 20px;
+  color: var(--ink);
+}
+
+.sidebar-tips-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-tips-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.sidebar-tips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-tips li {
+  position: relative;
+  padding: 8px 0 8px 22px;
+  border-bottom: 1px dotted var(--rule);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.sidebar-tips li:last-child { border-bottom: 0; }
+.sidebar-tips li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  color: var(--rust);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+/* Empty state */
+.sidebar-empty .sidebar-title {
+  color: var(--ink-soft);
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.sidebar-empty .sidebar-blurb {
+  color: var(--ink-faint);
+  font-style: italic;
+  font-size: 15px;
+}
+.sidebar-empty .empty-hint {
+  margin-top: 22px;
+  padding: 14px 16px;
+  background: var(--cream-deep);
+  border-left: 3px solid var(--rust);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+.sidebar-empty .empty-hint strong {
+  color: var(--rust-deep);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.page-footer {
+  margin-top: 42px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.page-footer p { margin: 0; }
+.page-footer .colophon { font-style: italic; text-transform: none; letter-spacing: 0.04em; font-size: 11.5px; color: var(--ink-soft); }
+
+/* ============================================================
+   Tooltips
+   ============================================================ */
+
+.leaflet-tooltip.zone-tooltip,
+.leaflet-tooltip.pin-tooltip {
+  background: var(--paper);
+  border: 1.2px solid var(--ink);
+  border-radius: 2px;
+  box-shadow: 2px 2px 0 var(--ink);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.leaflet-tooltip.zone-tooltip {
+  background: rgba(251, 245, 230, 0.92);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.leaflet-tooltip-top.pin-tooltip::before {
+  display: none;
+}
+
+/* Hide default marker shadow in case any fallback marker leaks through */
+.leaflet-marker-shadow { display: none; }
+

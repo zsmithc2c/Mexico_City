@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Maskable: full-bleed background, glyph in safe zone (centered ~80%) -->
+  <rect width="512" height="512" fill="#b8553a"/>
+  <g fill="#f4ead5" font-family="Georgia, serif" font-weight="700">
+    <text x="256" y="280" text-anchor="middle" font-size="150" font-style="italic">CDMX</text>
+    <text x="256" y="350" text-anchor="middle" font-size="44">★</text>
+  </g>
+</svg>

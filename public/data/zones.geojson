@@ -1,0 +1,299 @@
+{
+  "type": "FeatureCollection",
+  "name": "cdmx-zones",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "roma-norte",
+        "name": "Roma Norte",
+        "rating": "safe",
+        "home": true,
+        "blurb": "Your home base. Tree-lined streets, art-deco apartments, the densest cluster of good cafés and bars in the country. Walk it day or night without a second thought.",
+        "tips": [
+          "Calle Orizaba between Plaza Río de Janeiro and the southern edge is the spine — start there",
+          "Coffee at Cucurucho, lunch at Lalo!, late drink at Limantour",
+          "Sundays the parks fill with families and dogs — go",
+          "Cross to Condesa on Sonora or Veracruz for a different mood, same safety"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1700, 19.4225],
+          [-99.1545, 19.4220],
+          [-99.1545, 19.4135],
+          [-99.1700, 19.4140],
+          [-99.1700, 19.4225]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "roma-sur",
+        "name": "Roma Sur",
+        "rating": "safe",
+        "blurb": "Lower-key sibling to Roma Norte. Same safety, fewer foreigners, more affordable lunches. Worth the wander, especially on a slow afternoon.",
+        "tips": [
+          "Mercado Medellín for South American produce and Cuban food counters",
+          "Cross north on Tonalá or Orizaba into Roma Norte proper",
+          "Quieter at night — fine, just less foot traffic"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1700, 19.4135],
+          [-99.1545, 19.4135],
+          [-99.1560, 19.4050],
+          [-99.1700, 19.4055],
+          [-99.1700, 19.4135]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "condesa",
+        "name": "Condesa",
+        "rating": "safe",
+        "blurb": "The greenest of the central neighborhoods, organized around two parks. Equal to Roma Norte for safety, slightly more polished, slightly more dog-walker.",
+        "tips": [
+          "Run or walk the Parque México loop at golden hour",
+          "Avenida Amsterdam is a ring — follow it for an architecture tour",
+          "Tuesday tianguis on Pachuca/Campeche if you're around"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1820, 19.4180],
+          [-99.1700, 19.4170],
+          [-99.1700, 19.4060],
+          [-99.1790, 19.4055],
+          [-99.1830, 19.4090],
+          [-99.1820, 19.4180]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "juarez",
+        "name": "Juárez / Zona Rosa",
+        "rating": "safe",
+        "blurb": "Mixed bag in the best way. Juárez proper is calm and bookish; Zona Rosa is loud, neon, gay-friendly nightlife. Both safe, just different volumes.",
+        "tips": [
+          "Reforma's Sunday closure (ciclovía) passes through — bike or walk it",
+          "Lardo and Niddo are sit-down breakfast standouts on the Juárez side",
+          "Insurgentes Metro plaza is best skipped late at night, but the streets around are fine"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1700, 19.4310],
+          [-99.1565, 19.4310],
+          [-99.1545, 19.4225],
+          [-99.1700, 19.4225],
+          [-99.1700, 19.4310]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "polanco",
+        "name": "Polanco",
+        "rating": "safe",
+        "blurb": "Tree-shaded, embassy-quiet, expensive. Masaryk is the high-end shopping spine. Stellar restaurants, formal feel — bring real shoes.",
+        "tips": [
+          "Pujol and Quintonil are here — book weeks ahead",
+          "Walk the side streets, not Masaryk itself, for the architecture",
+          "Take an Uber back to Roma — it's not walking distance"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.2030, 19.4400],
+          [-99.1850, 19.4400],
+          [-99.1850, 19.4290],
+          [-99.2030, 19.4290],
+          [-99.2030, 19.4400]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "chapultepec",
+        "name": "Bosque de Chapultepec",
+        "rating": "safe",
+        "blurb": "The park, not a residential zone. Castillo on the hill, Antropología and modern-art museums in the woods. Mostly closed Mondays.",
+        "tips": [
+          "Antropología deserves a half-day minimum",
+          "Go Tuesday–Sunday; Mondays nearly everything is shut",
+          "Sundays are crowded but free for residents"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.2050, 19.4290],
+          [-99.1820, 19.4290],
+          [-99.1820, 19.4140],
+          [-99.2050, 19.4145],
+          [-99.2050, 19.4290]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "centro",
+        "name": "Centro Histórico",
+        "rating": "moderate",
+        "blurb": "Spectacular by day, rougher after dark. Stick to the main pedestrian streets and the perimeter of the Zócalo. Plan to Uber back to Roma by 9pm.",
+        "tips": [
+          "Madero is pedestrian-only and lined with sights — walk it from Bellas Artes to the Zócalo",
+          "Climb the Torre Latino observation deck for the best CDMX panorama",
+          "Don't wander north past the cathedral after dark — that's Tepito's edge",
+          "Café de Tacuba (the original) for a properly old lunch"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1455, 19.4400],
+          [-99.1280, 19.4400],
+          [-99.1280, 19.4280],
+          [-99.1455, 19.4280],
+          [-99.1455, 19.4400]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "doctores",
+        "name": "Doctores",
+        "rating": "moderate",
+        "blurb": "Working-class, gritty, fine by day if you have a reason. The Arena México (lucha libre) is the main draw and the only reason most visitors set foot here.",
+        "tips": [
+          "Lucha libre on Tuesdays and Fridays — go with a guide or group",
+          "Uber in and out, don't street-hail",
+          "Skip after dark unless you're at the Arena"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1530, 19.4280],
+          [-99.1380, 19.4280],
+          [-99.1380, 19.4180],
+          [-99.1530, 19.4180],
+          [-99.1530, 19.4280]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "coyoacan",
+        "name": "Coyoacán",
+        "rating": "daytrip",
+        "blurb": "Half-day or full-day trip. Cobblestone streets, Casa Azul, the central plaza with mariachis on weekends. Feels like a colonial town that the city grew around.",
+        "tips": [
+          "Buy Casa Azul tickets online a week+ in advance — they sell out daily",
+          "Eat at Mercado de Coyoacán — the tostadas counter is the move",
+          "Combine with San Ángel if it's a Saturday"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1700, 19.3580],
+          [-99.1530, 19.3580],
+          [-99.1530, 19.3450],
+          [-99.1700, 19.3450],
+          [-99.1700, 19.3580]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "san-angel",
+        "name": "San Ángel",
+        "rating": "daytrip",
+        "blurb": "Saturdays, basically. The Bazaar Sábado on Plaza San Jacinto is the reason to come — cobblestones, galleries, antiques, the city's best craft shopping.",
+        "tips": [
+          "Saturday is the day — most of the action is the bazaar",
+          "Combine with Coyoacán; they're 15 minutes apart by Uber",
+          "Casa Estudio Diego Rivera y Frida Kahlo is here (different from Casa Azul)"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.2000, 19.3530],
+          [-99.1850, 19.3530],
+          [-99.1850, 19.3410],
+          [-99.2000, 19.3410],
+          [-99.2000, 19.3530]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "xochimilco",
+        "name": "Xochimilco",
+        "rating": "daytrip",
+        "blurb": "Day trip. The trajineras (painted boats) on the canals are the main event. Touristy but genuinely fun — locals do this too. Bring food and drinks.",
+        "tips": [
+          "Embarcadero Cuemanco or Nuevo Nativitas for less hassle than Fernando Celada",
+          "Negotiate the boat price upfront, by the hour",
+          "Saturdays are the loudest party; weekdays are calmer",
+          "Allow half a day round-trip from Roma"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1180, 19.2920],
+          [-99.0950, 19.2920],
+          [-99.0950, 19.2700],
+          [-99.1180, 19.2700],
+          [-99.1180, 19.2920]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tepito",
+        "name": "Tepito",
+        "rating": "avoid",
+        "blurb": "Avoid. The city's most famous open-air market, also famously rough. People will tell you it's fine if you blend in. You won't blend in.",
+        "tips": [
+          "Don't pass through, even by Uber",
+          "If you're determined, go with a local guide who works that beat",
+          "Plenty of grit elsewhere in CDMX without the risk profile"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.1370, 19.4470],
+          [-99.1240, 19.4470],
+          [-99.1240, 19.4400],
+          [-99.1370, 19.4400],
+          [-99.1370, 19.4470]
+        ]]
+      }
+    }
+  ]
+}

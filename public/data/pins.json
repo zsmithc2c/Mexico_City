@@ -1,0 +1,222 @@
+[
+  {
+    "id": "mercado-roma",
+    "name": "Mercado Roma",
+    "category": "market",
+    "zone": "Roma Norte",
+    "coords": [19.4159, -99.1633],
+    "blurb": "Three-floor food hall on Querétaro. Pricier than the city's actual mercados, but well-curated. Drinks at the rooftop are the move.",
+    "tips": [
+      "Skip the crowded ground floor — head up",
+      "Open Tue–Sun, closed Mondays"
+    ]
+  },
+  {
+    "id": "plaza-rio-de-janeiro",
+    "name": "Plaza Río de Janeiro",
+    "category": "park",
+    "zone": "Roma Norte",
+    "coords": [19.4216, -99.1614],
+    "blurb": "The David replica fountain. Roma Norte's photogenic centerpiece, ringed by cafés and the occasional jacaranda in May.",
+    "tips": [
+      "Cucurucho coffee on the south edge",
+      "Wander Orizaba in either direction for the prettiest streets"
+    ]
+  },
+  {
+    "id": "parque-mexico",
+    "name": "Parque México",
+    "category": "park",
+    "zone": "Condesa",
+    "coords": [19.4106, -99.1714],
+    "blurb": "Condesa's social heart. Dogs, runners, an art-deco bandshell. Loop it once for orientation, then come back at sunset.",
+    "tips": [
+      "Best at golden hour",
+      "Sunday mornings are full of families and Sunday newspapers"
+    ]
+  },
+  {
+    "id": "limantour",
+    "name": "Licorería Limantour",
+    "category": "drink",
+    "zone": "Roma Norte",
+    "coords": [19.4148, -99.1633],
+    "blurb": "World's-50-Best cocktail bar that actually lives up to the rep. Get there before 8 or accept a wait.",
+    "tips": [
+      "Reserve online; walk-in is rough on weekends",
+      "Order the Margarita Al Pastor"
+    ]
+  },
+  {
+    "id": "contramar",
+    "name": "Contramar",
+    "category": "eat",
+    "zone": "Roma Norte",
+    "coords": [19.4180, -99.1670],
+    "blurb": "Lunch only, weekends booked weeks out. Tuna tostadas and grilled snapper. Most people's answer to 'one meal in CDMX.'",
+    "tips": [
+      "Reserve a month ahead for weekends",
+      "Aim for 1:30 pm if walking in midweek"
+    ]
+  },
+  {
+    "id": "zocalo",
+    "name": "Zócalo",
+    "category": "landmark",
+    "zone": "Centro Histórico",
+    "coords": [19.4326, -99.1332],
+    "blurb": "Plaza de la Constitución. Massive Mexican flag, surrounded by Catedral and Palacio Nacional. There's always something happening.",
+    "tips": [
+      "Sunrise flag-raising is genuinely impressive",
+      "Climb to a rooftop bar (Gran Hotel CDMX) for the view"
+    ]
+  },
+  {
+    "id": "catedral-metropolitana",
+    "name": "Catedral Metropolitana",
+    "category": "landmark",
+    "zone": "Centro Histórico",
+    "coords": [19.4341, -99.1333],
+    "blurb": "Four-hundred-year-old cathedral, sinking unevenly into the lakebed. Free entry, and the floor is noticeably tilted underfoot.",
+    "tips": [
+      "Side chapels are quieter than the nave",
+      "Watch the floor — you can feel the slope"
+    ]
+  },
+  {
+    "id": "templo-mayor",
+    "name": "Templo Mayor",
+    "category": "culture",
+    "zone": "Centro Histórico",
+    "coords": [19.4350, -99.1313],
+    "blurb": "Aztec ruins beside the cathedral, with an excellent attached museum. Half-hour minimum, two hours if you read everything.",
+    "tips": [
+      "Combo with the cathedral — they're 100m apart",
+      "Closed Mondays"
+    ]
+  },
+  {
+    "id": "bellas-artes",
+    "name": "Palacio de Bellas Artes",
+    "category": "culture",
+    "zone": "Centro Histórico",
+    "coords": [19.4352, -99.1413],
+    "blurb": "Art-deco/art-nouveau theater on the edge of Alameda Central. Murals by Rivera, Orozco, Siqueiros inside. Worth going in even without a show.",
+    "tips": [
+      "Cross the street to Sears for the postcard view from the 8th-floor café",
+      "Closed Mondays"
+    ]
+  },
+  {
+    "id": "torre-latino",
+    "name": "Torre Latinoamericana",
+    "category": "view",
+    "zone": "Centro Histórico",
+    "coords": [19.4341, -99.1404],
+    "blurb": "1956 skyscraper, observation deck on 44. Best panorama of the city by far on a clear day — and an engineering marvel for surviving 1985.",
+    "tips": [
+      "Go on a clear morning before the smog rises",
+      "The combo museum ticket is barely worth it"
+    ]
+  },
+  {
+    "id": "palacio-nacional",
+    "name": "Palacio Nacional",
+    "category": "culture",
+    "zone": "Centro Histórico",
+    "coords": [19.4326, -99.1320],
+    "blurb": "Diego Rivera's monumental staircase murals — the visual history of Mexico, panel by panel. Free with ID.",
+    "tips": [
+      "Bring your passport — they actually check",
+      "Often closed weekends — go midweek"
+    ]
+  },
+  {
+    "id": "antropologia",
+    "name": "Museo Nacional de Antropología",
+    "category": "culture",
+    "zone": "Chapultepec",
+    "coords": [19.4260, -99.1862],
+    "blurb": "The big one. Aztec, Maya, Olmec, Zapotec, Teotihuacano. Allow at least three hours; you'll still leave wanting more.",
+    "tips": [
+      "Start with Sala Mexica (Aztec) on the ground floor",
+      "Go on a weekday morning",
+      "Closed Mondays"
+    ]
+  },
+  {
+    "id": "castillo-chapultepec",
+    "name": "Castillo de Chapultepec",
+    "category": "landmark",
+    "zone": "Chapultepec",
+    "coords": [19.4205, -99.1820],
+    "blurb": "Hilltop castle, former imperial residence under Maximilian. Sweeping view down Reforma. The walk up is steep but short.",
+    "tips": [
+      "Closed Mondays",
+      "Combine with Antropología — a 15-minute walk apart through the park"
+    ]
+  },
+  {
+    "id": "soumaya",
+    "name": "Museo Soumaya",
+    "category": "culture",
+    "zone": "Polanco",
+    "coords": [19.4406, -99.2046],
+    "blurb": "The mirrored Slim-funded museum at Plaza Carso. Free. The collection is uneven; the building is the attraction. The Rodin floor punches above the rest.",
+    "tips": [
+      "Go for the architecture and the Rodins",
+      "Uber there — Polanco-adjacent, not really walkable from Roma"
+    ]
+  },
+  {
+    "id": "casa-azul",
+    "name": "Casa Azul (Frida Kahlo)",
+    "category": "culture",
+    "zone": "Coyoacán",
+    "coords": [19.3550, -99.1623],
+    "blurb": "Frida Kahlo's house. The single most-booked museum in CDMX. Buy tickets online a week+ in advance — they sell out daily.",
+    "tips": [
+      "Buy tickets online ahead — do not show up hoping",
+      "Closed Mondays",
+      "Pair with lunch on the Coyoacán plaza"
+    ]
+  },
+  {
+    "id": "coyoacan-plaza",
+    "name": "Jardín Centenario / Plaza Hidalgo",
+    "category": "park",
+    "zone": "Coyoacán",
+    "coords": [19.3493, -99.1620],
+    "blurb": "The town-square heart of Coyoacán. Mariachis on weekends, churros in the corner, cobblestones throughout.",
+    "tips": [
+      "The coyote fountain is the natural meeting point",
+      "Mercado de Coyoacán is two blocks east — get tostadas"
+    ]
+  },
+  {
+    "id": "bazaar-sabado",
+    "name": "Bazaar Sábado",
+    "category": "market",
+    "zone": "San Ángel",
+    "coords": [19.3461, -99.1916],
+    "blurb": "Saturdays only. Plaza San Jacinto fills with crafts and art vendors — best craft shopping in the country if you're shopping at all.",
+    "tips": [
+      "Go before noon to dodge the worst of the crowd",
+      "Carry cash — most stalls don't take cards",
+      "Saturdays only — don't show up any other day"
+    ]
+  },
+  {
+    "id": "xochimilco-trajineras",
+    "name": "Xochimilco Trajineras",
+    "category": "landmark",
+    "zone": "Xochimilco",
+    "coords": [19.2810, -99.1030],
+    "blurb": "Painted-boat tours of the canals. Touristy in the best sense — locals do this too. Bring food, music, and someone to argue with.",
+    "tips": [
+      "Start at Embarcadero Cuemanco or Nuevo Nativitas, not Fernando Celada",
+      "Negotiate hourly, agree on price before boarding",
+      "Floating mariachis cost extra per song — fix that price too"
+    ]
+  }
+]
