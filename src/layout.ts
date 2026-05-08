@@ -1,4 +1,9 @@
 export const APP_HTML = `
+  <nav class="page-nav" aria-label="Primary">
+    <a href="./" aria-current="page">Map</a>
+    <a href="./phrasebook.html">Phrasebook</a>
+  </nav>
+
   <header class="page-header">
     <div>
       <p class="kicker">A field guide · Volume 01</p>
