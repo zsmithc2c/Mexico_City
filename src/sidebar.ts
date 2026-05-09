@@ -7,6 +7,15 @@ export interface SidebarHandle {
   setUserDistance: (info: { distanceMeters: number; toName: string } | null) => void;
 }
 
+const CITY_FACTS = [
+  "CDMX sits on a drained lakebed — the whole city is sinking unevenly, some buildings up to 40 cm a year",
+  "At 2,240 m elevation, jet lag is doubled by altitude — go easy on alcohol and water heavily for the first 48 hours",
+  "It's the largest Spanish-speaking city in the world by population — about 22 million in the metro area",
+  "The Aztec capital Tenochtitlan, founded in 1325, was one of the largest cities in the world before the Spanish razed it in 1521",
+  "Mexico City has more museums than any other city in the world after London — 150+ at last count",
+  "The Metro is one of the cheapest in the world: a flat 5-peso fare goes anywhere on the network",
+];
+
 const EMPTY_HTML = `
   <div class="sidebar-empty">
     <p class="sidebar-kicker">Field Notes</p>
@@ -19,6 +28,10 @@ const EMPTY_HTML = `
       <strong>Home base</strong><br/>
       Roma Norte is starred. The map opens centered on it.
     </div>
+    <p class="sidebar-facts-label">Did you know?</p>
+    <ul class="sidebar-facts">
+      ${CITY_FACTS.map((f) => `<li>${f}</li>`).join('')}
+    </ul>
   </div>
 `;
 
@@ -36,6 +49,16 @@ function tipsList(tips: string[]): string {
     <p class="sidebar-tips-label">Field notes</p>
     <ul class="sidebar-tips">
       ${tips.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}
+    </ul>
+  `;
+}
+
+function factsList(facts: string[] | undefined): string {
+  if (!facts || facts.length === 0) return '';
+  return `
+    <p class="sidebar-facts-label">Did you know?</p>
+    <ul class="sidebar-facts">
+      ${facts.map((f) => `<li>${escapeHtml(f)}</li>`).join('')}
     </ul>
   `;
 }
@@ -67,6 +90,7 @@ function renderPin(pin: Pin, distanceTag: string): string {
     </div>
     <p class="sidebar-blurb">${escapeHtml(pin.blurb)}</p>
     ${tipsList(pin.tips)}
+    ${factsList(pin.facts)}
   `;
 }
 

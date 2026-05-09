@@ -580,6 +580,62 @@ a:hover { color: var(--ink); }
   font-size: 13px;
 }
 
+/* Did you know? — interesting facts */
+.sidebar-facts-label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 22px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-facts-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.sidebar-facts {
+  list-style: none;
+  padding: 14px 16px;
+  margin: 0;
+  background: var(--cream-deep);
+  border-left: 3px solid var(--ochre);
+  border-radius: 2px;
+}
+
+.sidebar-facts li {
+  position: relative;
+  padding: 6px 0 6px 22px;
+  font-family: var(--serif);
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.sidebar-facts li + li {
+  border-top: 1px dotted var(--rule);
+  margin-top: 4px;
+  padding-top: 10px;
+}
+.sidebar-facts li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: var(--ochre-deep);
+  font-style: normal;
+  font-size: 13px;
+}
+
+.sidebar-empty .sidebar-facts {
+  margin-top: 18px;
+}
+
 /* Empty state */
 .sidebar-empty .sidebar-title {
   color: var(--ink-soft);

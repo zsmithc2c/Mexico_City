@@ -69,6 +69,12 @@
     "tips": [
       "Sunrise flag-raising is genuinely impressive",
       "Climb to a rooftop bar (Gran Hotel CDMX) for the view"
+    ],
+    "facts": [
+      "One of the largest city squares in the world — about 240 m on a side, big enough to land a plane",
+      "Built directly over the sacred precinct of Tenochtitlan — Templo Mayor's foundation runs under the cathedral and Palacio Nacional",
+      "The flag in the center is 25 m wide and lowered every evening by a full military ceremony",
+      "Officially named Plaza de la Constitución — 'Zócalo' (literally 'pedestal') stuck because a monument's pedestal sat unused here for decades in the 19th century"
     ]
   },
   {
@@ -81,6 +87,12 @@
     "tips": [
       "Side chapels are quieter than the nave",
       "Watch the floor — you can feel the slope"
+    ],
+    "facts": [
+      "Construction started in 1573 and didn't finish until 1813 — 240 years across three architectural styles",
+      "Built using stones from the Templo Mayor pyramid the Spanish destroyed — a deliberate symbolic erasure of the Aztec capital",
+      "It has been sinking unevenly for centuries — engineers spent the 1990s injecting concrete under the foundations to slow the tilt",
+      "The Altar of the Kings inside is one of the most ornate Baroque artworks in the Americas"
     ]
   },
   {
@@ -91,8 +103,14 @@
     "coords": [19.4350, -99.1313],
     "blurb": "Aztec ruins beside the cathedral, with an excellent attached museum. Half-hour minimum, two hours if you read everything.",
     "tips": [
-      "Combo with the cathedral — they're 100m apart",
+      "Combo with the cathedral — they're 100 m apart",
       "Closed Mondays"
+    ],
+    "facts": [
+      "The site was lost for centuries — rediscovered in 1978 when electricity workers struck a stone disk of the goddess Coyolxauhqui",
+      "It was the spiritual heart of Tenochtitlan: a double pyramid honoring Huitzilopochtli (war/sun) and Tlaloc (rain)",
+      "Each Aztec ruler enlarged the pyramid, so the site has seven nested temples — like an architectural matryoshka",
+      "Spanish conquistadors deliberately demolished it in 1521 and built the cathedral over the holiest part of the precinct"
     ]
   },
   {
@@ -105,6 +123,12 @@
     "tips": [
       "Cross the street to Sears for the postcard view from the 8th-floor café",
       "Closed Mondays"
+    ],
+    "facts": [
+      "The white Carrara marble exterior is so heavy the building has sunk about four meters since it was finished in 1934",
+      "Diego Rivera's 'Man at the Crossroads' inside is a recreated version of the mural Rockefeller had destroyed in New York for including Lenin",
+      "The stained-glass curtain in the theater was made by Tiffany Studios — one ton of opalescent glass, a depiction of the Valley of Mexico's volcanoes",
+      "Construction started in 1904 under Porfirio Díaz and was paused for 30 years by the Revolution"
     ]
   },
   {
@@ -117,6 +141,12 @@
     "tips": [
       "Go on a clear morning before the smog rises",
       "The combo museum ticket is barely worth it"
+    ],
+    "facts": [
+      "When it opened in 1956 it was the tallest building in Latin America at 182 m",
+      "It is the world's first skyscraper built on highly seismic land — engineer Leonardo Zeevaert designed deep friction piles that let the tower 'float' on the soft lakebed",
+      "Survived the 1985 earthquake (8.1 magnitude) without a crack while older, lower buildings nearby collapsed",
+      "Survived a 2017 earthquake (7.1) the same way — its design is still studied in seismic engineering"
     ]
   },
   {
@@ -129,6 +159,356 @@
     "tips": [
       "Bring your passport — they actually check",
       "Often closed weekends — go midweek"
+    ],
+    "facts": [
+      "Built on the site of Moctezuma II's palace — Hernán Cortés used the original stones to construct his own residence here in 1521",
+      "Diego Rivera painted the staircase murals between 1929 and 1935 — they show Mexican history from pre-Hispanic times through the Revolution",
+      "The 'Bell of Dolores,' which Father Hidalgo rang in 1810 to start the War of Independence, hangs over the central balcony",
+      "Every September 15 the President rings that bell at 11 pm to begin the 'Grito de Independencia' ceremony"
+    ]
+  },
+  {
+    "id": "casa-azulejos",
+    "name": "Casa de los Azulejos",
+    "category": "landmark",
+    "zone": "Centro Histórico",
+    "coords": [19.4339, -99.1402],
+    "blurb": "16th-century palace covered in blue-and-white Talavera tiles. Houses a Sanborns now — walk in for the courtyard and the Orozco mural over the back staircase.",
+    "tips": [
+      "Free to enter — no ticket needed for the courtyard",
+      "Don't miss the José Clemente Orozco mural up the back stairs",
+      "Coffee or breakfast inside is touristy but the room is worth it"
+    ],
+    "facts": [
+      "Legend has it the heir added the tiles in the 18th century to spite his father, who told him he'd 'never build a house of tiles'",
+      "Belonged for centuries to the Counts of the Valle de Orizaba, one of New Spain's wealthiest families",
+      "The Sanborns chain has occupied it since 1919 — it functions as both a national monument and a fast-food coffee shop"
+    ]
+  },
+  {
+    "id": "plaza-santo-domingo",
+    "name": "Plaza de Santo Domingo",
+    "category": "landmark",
+    "zone": "Centro Histórico",
+    "coords": [19.4374, -99.1342],
+    "blurb": "The second great plaza of Centro, three blocks north of the Zócalo. Lined with arcades where 'evangelistas' (typists for hire) have sat since the 19th century.",
+    "tips": [
+      "Best in the morning when the typists set up their tables",
+      "Santo Domingo church and the old Inquisition palace face each other across the square",
+      "Hostería de Santo Domingo for lunch is a block away"
+    ],
+    "facts": [
+      "A gathering place since Aztec times — the original Templo Mayor sacred precinct extended this far north",
+      "Public scribes still type letters and fill out forms on typewriters under these arcades — a profession centuries old",
+      "The former Palace of the Inquisition on the east side now houses the Mexican medical history museum"
+    ]
+  },
+  {
+    "id": "san-ildefonso",
+    "name": "Antiguo Colegio de San Ildefonso",
+    "category": "culture",
+    "zone": "Centro Histórico",
+    "coords": [19.4365, -99.1322],
+    "blurb": "Where Mexican muralism was born. Rivera, Orozco, and Siqueiros painted their first major murals on these courtyard walls in the 1920s. Now a museum with rotating exhibits.",
+    "tips": [
+      "Closed Mondays",
+      "Combine with Templo Mayor — they're a 5-minute walk apart",
+      "The murals on the open courtyard walls are visible from the entry hall"
+    ],
+    "facts": [
+      "Diego Rivera's 'La Creación' (1922) here was his first mural — and the first major mural of the modern Mexican movement",
+      "It was a Jesuit school from 1588 until the Jesuits were expelled from New Spain in 1767",
+      "José Vasconcelos (yes, the library's namesake) commissioned the murals as Education Minister to literally re-paint Mexico's identity"
+    ]
+  },
+  {
+    "id": "munal",
+    "name": "Museo Nacional de Arte (MUNAL)",
+    "category": "culture",
+    "zone": "Centro Histórico",
+    "coords": [19.4357, -99.1389],
+    "blurb": "Mexico's flagship museum of Mexican art from the 16th century to the mid-20th. Beaux-Arts palace, broad collection, far less crowded than Antropología.",
+    "tips": [
+      "Closed Mondays",
+      "The José María Velasco landscapes alone are worth the visit",
+      "Free Sundays — but you trade quiet for the crowd"
+    ],
+    "facts": [
+      "Houses the largest collection of Mexican paintings in the country",
+      "The bronze equestrian statue of King Carlos IV out front — known as 'El Caballito' — is one of the largest cast-bronze statues in the world",
+      "The building was originally the Ministry of Communications, finished in 1911 just months before the Revolution overthrew its patrons"
+    ]
+  },
+  {
+    "id": "museo-mural-rivera",
+    "name": "Museo Mural Diego Rivera",
+    "category": "culture",
+    "zone": "Centro Histórico",
+    "coords": [19.4356, -99.1455],
+    "blurb": "A single-mural museum, built around Rivera's 'Sueño de una Tarde Dominical en la Alameda Central.' The mural was rescued after the 1985 earthquake destroyed its original hotel.",
+    "tips": [
+      "Small museum — an hour is plenty",
+      "Closed Mondays",
+      "Right at the west end of Alameda — easy combo with a stroll"
+    ],
+    "facts": [
+      "The mural depicts Rivera himself as a child, holding hands with La Catrina — the iconic skeleton dame invented by José Guadalupe Posada",
+      "Originally painted for the Hotel del Prado in 1947 — the hotel's main entrance was built around the mural",
+      "When the 1985 earthquake collapsed the hotel, the 15 m mural was carefully cut from the wall and moved here in one piece"
+    ]
+  },
+  {
+    "id": "plaza-garibaldi",
+    "name": "Plaza Garibaldi",
+    "category": "landmark",
+    "zone": "Centro Histórico",
+    "coords": [19.4399, -99.1399],
+    "blurb": "The mariachi plaza. Bands in full charro suits stand around waiting to be hired by the song. Loudest after dark — go with company and stay aware.",
+    "tips": [
+      "Negotiate per song before they play — 100–200 pesos is standard",
+      "Museo del Tequila y el Mezcal (MUTEM) is right on the plaza",
+      "Don't wander north — Tepito's edge is one block away",
+      "Best with a few friends; not a solo-after-dark stop"
+    ],
+    "facts": [
+      "Mariachi bands have gathered here for hire since the 1920s — it's a working musicians' market, not a tourist show",
+      "The plaza was overhauled in 2010 to feel safer; it works at early evening, less so very late",
+      "Salón Tenampa, on the north edge, has poured tequila since 1925 and is where many mariachi standards were first popularized"
+    ]
+  },
+  {
+    "id": "museo-ciudad",
+    "name": "Museo de la Ciudad de México",
+    "category": "culture",
+    "zone": "Centro Histórico",
+    "coords": [19.4296, -99.1336],
+    "blurb": "A 17th-century palace south of the Zócalo, telling the city's story. Smaller and quieter than MUNAL, with a serene courtyard.",
+    "tips": [
+      "Free entry",
+      "Closed Mondays",
+      "Spot the Aztec serpent's head built into the corner of the building — recycled from a pre-Hispanic temple"
+    ],
+    "facts": [
+      "The corner stone is a carved feathered-serpent head from an Aztec temple — colonial builders just incorporated it into the palace foundation",
+      "Belonged to the Counts of Santiago de Calimaya for centuries",
+      "The painter Joaquín Clausell turned an upstairs room into his personal studio — every wall is covered in his sketches"
+    ]
+  },
+  {
+    "id": "cafe-tacuba",
+    "name": "Café de Tacuba",
+    "category": "eat",
+    "zone": "Centro Histórico",
+    "coords": [19.4360, -99.1378],
+    "blurb": "Open since 1912 in a former 17th-century convent. Classical Mexican comfort food — chiles en nogada, mole, enchiladas — under tile murals and chandeliers.",
+    "tips": [
+      "Get a table in the main hall, not the side room",
+      "Order chiles en nogada when in season (Aug–Sept)",
+      "It's touristy now — go for the room and the history"
+    ],
+    "facts": [
+      "The rock band Café Tacvba named themselves after this restaurant — they used to eat here as students",
+      "The Talavera tile murals depict the supposed invention of mole by a 17th-century nun in Puebla",
+      "It still hosts a small estudiantina — a strolling string band in colonial dress — most evenings"
+    ]
+  },
+  {
+    "id": "el-cardenal",
+    "name": "El Cardenal",
+    "category": "eat",
+    "zone": "Centro Histórico",
+    "coords": [19.4337, -99.1395],
+    "blurb": "Among the best traditional Mexican breakfasts in the city. Hot chocolate with sweet bread, fresh ricotta, and the thickest tamales you'll meet. There's a quieter Hilton location across the street.",
+    "tips": [
+      "Breakfast and lunch only — go before 11 am to skip the queue",
+      "Order the chocolate caliente with concha (sweet bread)",
+      "Closed late afternoons"
+    ]
+  },
+  {
+    "id": "azul-historico",
+    "name": "Azul Histórico",
+    "category": "eat",
+    "zone": "Centro Histórico",
+    "coords": [19.4341, -99.1379],
+    "blurb": "Ricardo Muñoz Zurita's love letter to Mexican regional cooking, served in the leafy courtyard of a 17th-century palace. Reservations strongly recommended.",
+    "tips": [
+      "Sit in the courtyard if it's not raining",
+      "Reserve online — walk-in lunches are often turned away",
+      "The 'manchamanteles' mole and chiles en nogada (in season) are the signatures"
+    ]
+  },
+  {
+    "id": "limosneros",
+    "name": "Limosneros",
+    "category": "eat",
+    "zone": "Centro Histórico",
+    "coords": [19.4361, -99.1379],
+    "blurb": "Modern Mexican with serious technique — pre-Hispanic ingredients, careful platings, and an excellent mezcal list. Smaller, quieter, and more chef-driven than its big-name neighbors.",
+    "tips": [
+      "Reserve, especially weekends",
+      "Lean on the mezcal flight",
+      "The grasshopper guacamole is genuinely good if you're brave"
+    ]
+  },
+  {
+    "id": "hosteria-santo-domingo",
+    "name": "Hostería de Santo Domingo",
+    "category": "eat",
+    "zone": "Centro Histórico",
+    "coords": [19.4373, -99.1346],
+    "blurb": "Open continuously since 1860. The oldest restaurant in Mexico City. Famous for chiles en nogada year-round (rare) and a stubbornly old-school atmosphere.",
+    "tips": [
+      "Year-round chiles en nogada — they make their own walnut sauce daily",
+      "Lunch is the move; dinner crowd is thinner",
+      "Cash is still the path of least friction here"
+    ],
+    "facts": [
+      "The oldest continuously operating restaurant in Mexico City — founded in 1860",
+      "Famous for serving chiles en nogada year-round; most places only offer them for two months in late summer",
+      "The painted dining room hasn't really changed since the early 20th century — by design"
+    ]
+  },
+  {
+    "id": "bar-la-opera",
+    "name": "Bar La Ópera",
+    "category": "drink",
+    "zone": "Centro Histórico",
+    "coords": [19.4350, -99.1399],
+    "blurb": "An 1895 cantina with carved mahogany, mirrored ceilings, and a bullet hole said to be from Pancho Villa. The atmosphere is the order; the food is honest.",
+    "tips": [
+      "Look up — staff will point out the Villa bullet hole in the ceiling",
+      "Tequila and cantina classics, not cocktails",
+      "Closed Sundays"
+    ],
+    "facts": [
+      "Pancho Villa is said to have ridden in on horseback in 1910 and fired a shot into the ceiling — the hole is still pointed out",
+      "Originally a French-style café opened in 1876, converted to a cantina in 1895",
+      "The carved bar and mirrored ceilings were imported from New Orleans"
+    ]
+  },
+  {
+    "id": "balcon-zocalo",
+    "name": "Balcón del Zócalo",
+    "category": "view",
+    "zone": "Centro Histórico",
+    "coords": [19.4327, -99.1342],
+    "blurb": "Rooftop terrace of the Zócalo Central hotel, perched directly over the plaza with the Cathedral as backdrop. Drinks beat the food — but the view is the point.",
+    "tips": [
+      "Reserve a sunset table — they fill fast on clear evenings",
+      "Mezcal cocktails are the move",
+      "Lunch is generally easier than dinner for walk-ins"
+    ]
+  },
+  {
+    "id": "terraza-gran-hotel",
+    "name": "Terraza del Gran Hotel CDMX",
+    "category": "view",
+    "zone": "Centro Histórico",
+    "coords": [19.4324, -99.1340],
+    "blurb": "Rooftop with the most direct, head-on view of the Zócalo flag. The hotel lobby's stained-glass Tiffany ceiling alone is worth a quick detour even if you skip the bar.",
+    "tips": [
+      "Walk through the lobby on the way up to see the Tiffany ceiling",
+      "A coffee or single drink is enough — the food is overpriced",
+      "Best at dawn or dusk when the flag is being raised or lowered"
+    ],
+    "facts": [
+      "The lobby's stained-glass ceiling was designed in 1908 — a contemporary of Paris's Galeries Lafayette dome",
+      "The building was originally the Centro Mercantil department store before becoming a hotel",
+      "Daniel Craig's James Bond walks through this lobby in the opening sequence of 'Spectre' (2015)"
+    ]
+  },
+  {
+    "id": "el-mayor",
+    "name": "El Mayor",
+    "category": "view",
+    "zone": "Centro Histórico",
+    "coords": [19.4347, -99.1311],
+    "blurb": "Rooftop café-bar inside the Porrúa bookstore, looking straight down into Templo Mayor's excavation pit. The unsung best view in Centro.",
+    "tips": [
+      "Skip the entrée menu — it's a bookshop's café upstairs",
+      "Coffee, beer, and aerial photos of the ruins",
+      "Closed Mondays when Templo Mayor closes"
+    ]
+  },
+  {
+    "id": "biblioteca-vasconcelos",
+    "name": "Biblioteca Vasconcelos",
+    "category": "culture",
+    "zone": "Buenavista",
+    "coords": [19.4477, -99.1530],
+    "blurb": "The 'megabiblioteca.' A 250-meter-long suspended-shelf library that looks like Borges and Escher built it together. Floating bookcases, a full whale skeleton, and a botanical garden out back.",
+    "tips": [
+      "Free entry — bring ID, leave bags at the lockers near the entrance",
+      "Closed Mondays — open 8:30 am to 7:30 pm other days",
+      "Walk all the way to the back — most people stop halfway and miss Gabriel Orozco's whale (Mátrix Móvil)",
+      "The botanical garden behind the library is a quiet payoff after the architecture",
+      "Photographs allowed without flash — early morning is the cleanest light"
+    ],
+    "facts": [
+      "Inaugurated in 2006, designed by Alberto Kalach — the multi-story shelves appear to float because the structure hangs from the roof, not the floor",
+      "Holds nearly 600,000 volumes across seven cantilevered levels stacked the length of two football fields",
+      "The suspended grey whale skeleton in the central nave is by Gabriel Orozco — titled 'Mátrix Móvil,' it was assembled from a real whale that washed up in Baja California",
+      "Named for José Vasconcelos, the Education Minister who launched Mexico's public library system in the 1920s and commissioned the muralist movement",
+      "Closed within a year of opening due to construction defects — it reopened in 2008 after extensive repairs",
+      "The botanical garden behind the building has 60,000 plants representing every ecoregion of Mexico"
+    ]
+  },
+  {
+    "id": "monumento-revolucion",
+    "name": "Monumento a la Revolución",
+    "category": "landmark",
+    "zone": "Tabacalera",
+    "coords": [19.4358, -99.1547],
+    "blurb": "Massive copper-domed art-deco arch built from the abandoned skeleton of a never-finished Porfirian palace. Ride the glass elevator inside the dome for a 360° view.",
+    "tips": [
+      "Take the elevator to the dome (small fee) for the view",
+      "Closed Mondays for the elevator and museum",
+      "Walkable from Vasconcelos in 15–20 minutes south",
+      "The plaza around it has dancing fountains in the evening"
+    ],
+    "facts": [
+      "Originally meant to be the Federal Legislative Palace under Porfirio Díaz — construction began in 1910 and stopped when the Revolution broke out months later",
+      "Architect Carlos Obregón Santacilia salvaged the steel skeleton in 1933 and rebuilt it as a monument to the very revolution that killed the original project",
+      "Pancho Villa, Madero, Carranza, and Plutarco Elías Calles are entombed in the four corner pillars",
+      "At 67 m, it is one of the tallest triumphal arches in the world"
+    ]
+  },
+  {
+    "id": "tianguis-chopo",
+    "name": "Tianguis Cultural del Chopo",
+    "category": "market",
+    "zone": "Buenavista",
+    "coords": [19.4485, -99.1565],
+    "blurb": "Saturday-only alternative-culture street market — the heart of Mexico City's punk, goth, metal, and underground scene since 1980. Vinyl, band shirts, zines, leather jackets.",
+    "tips": [
+      "Saturdays only, roughly 11 am to 5 pm",
+      "Walking distance from Biblioteca Vasconcelos — combine them",
+      "Cash only at most stalls",
+      "Subcultures are friendlier than they look — go in respectful and curious"
+    ],
+    "facts": [
+      "Running every Saturday since 1980 — Mexico City's longest-continuing music subculture market",
+      "It originated as a tianguis around the Museo del Chopo (then a science museum) and never left the name",
+      "It's where countless Mexican rock and punk bands first sold demo tapes and self-released records"
+    ]
+  },
+  {
+    "id": "museo-chopo",
+    "name": "Museo Universitario del Chopo",
+    "category": "culture",
+    "zone": "Buenavista",
+    "coords": [19.4480, -99.1556],
+    "blurb": "Iron-and-glass art-nouveau pavilion (originally imported from Germany in the 1900s). Now a UNAM contemporary-art space — film, performance, queer and counter-cultural programming.",
+    "tips": [
+      "Free or very cheap entry depending on the show",
+      "Closed Mondays",
+      "Easy cultural pairing with Vasconcelos and the Saturday tianguis"
+    ],
+    "facts": [
+      "The iron-and-glass structure was prefabricated in Düsseldorf in 1902 and shipped to Mexico in pieces",
+      "It opened in 1910 as Mexico City's first natural-history museum — dinosaur skeletons stayed for 50 years",
+      "Since 1975 it has been a UNAM cultural center — early supporter of queer, punk, and counter-cultural art before the mainstream caught up"
     ]
   },
   {
@@ -142,6 +522,11 @@
       "Start with Sala Mexica (Aztec) on the ground floor",
       "Go on a weekday morning",
       "Closed Mondays"
+    ],
+    "facts": [
+      "The central courtyard's giant umbrella fountain — 'El Paraguas' — is held up by a single 28 m column carved with pre-Hispanic motifs",
+      "Designed by Pedro Ramírez Vázquez and opened in 1964 — the architecture is considered one of the great works of 20th-century Mexican modernism",
+      "Houses the original Sun Stone (often miscalled the Aztec Calendar) and the colossal Olmec heads — both anchors of Mexican identity"
     ]
   },
   {
@@ -154,6 +539,11 @@
     "tips": [
       "Closed Mondays",
       "Combine with Antropología — a 15-minute walk apart through the park"
+    ],
+    "facts": [
+      "The only royal castle in the Americas to have housed actual European sovereigns — Emperor Maximilian and Empress Carlota lived here in the 1860s",
+      "Maximilian commissioned the broad avenue down the hill (now Paseo de la Reforma) so Carlota could see her palace from the city",
+      "It served as Mexico's presidential residence until 1939, when President Cárdenas turned it into the National History Museum"
     ]
   },
   {
