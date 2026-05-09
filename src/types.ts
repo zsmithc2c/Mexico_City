@@ -40,6 +40,7 @@ export interface Pin {
   coords: [number, number];
   blurb: string;
   tips: string[];
+  facts?: string[];
 }
 
 export type Selection =
