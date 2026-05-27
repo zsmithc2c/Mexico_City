@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light only" />
 <meta name="supported-color-schemes" content="light" />
-<title>Zachary's Mexico Spanish Guide</title>
+<title>Mexican Spanish Phrasebook & Travel Guide | Zachary's Pocket Guide</title>
+<meta name="description" content="Master native-friendly Mexican Spanish with our interactive phrasebook. Learn local slang, restaurant etiquette, polite greetings, and essential travel verbs." />
 <link rel="icon" type="image/svg+xml" href="./icon.svg" />
 <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 <meta name="theme-color" content="#b03515" />
@@ -358,6 +359,13 @@
     font-family: 'Fraunces', serif;
     color: var(--accent-deep);
     font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    transition: opacity 0.2s;
+  }
+  .modal-pron:hover {
+    opacity: 0.75;
   }
   .modal-pron::before {
     content: '\01F50A  ';
@@ -502,6 +510,47 @@
   ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you use formal Greetings & Goodbyes in Mexican Spanish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Mexico, open interactions with a formal title like '¿Cómo está?' or 'Hola, buenos días'. Defaulting to formal pronouns (usted) shows good manners with elders and service workers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does '¿Mande?' mean in Mexico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "'¿Mande?' is a uniquely Mexican phrase used to say 'pardon?' or 'what?' when you missed something. It is highly valued by locals as a respectful way to ask for repetition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you ask for the bill at a Mexican restaurant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Say 'La cuenta, por favor'. Waiters in Mexico rarely bring the check to your table unprompted, so you must explicitly ask for it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Mexican slang word 'Órale' mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "'Órale' is a multipurpose Mexican word that can mean 'wow', 'okay', 'alright', or 'let's go', depending completely on your tone of voice."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -517,17 +566,51 @@
   </div>
   <div class="eyebrow">A Pocket Guide for M&eacute;xico &middot; May 2026</div>
   <h1>Zachary's <em>Spanish</em><br/>Phrasebook</h1>
-  <p class="sub">Tap any phrase for pronunciation, useful follow-ups, and cultural notes. Tested for friendliness with Mexican Spanish.</p>
+  <p class="sub">Tap any phrase to hear native-friendly Spanish audio, get useful follow-ups, and explore cultural notes. Tested for friendliness with Mexican Spanish.</p>
 
   <div class="search-wrap">
     <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-    <input type="text" class="search" id="search" placeholder="Search phrases (e.g. coffee, bathroom, thanks)..." />
+    <input type="text" class="search" id="search" placeholder="Search phrases (e.g. coffee, bathroom, thanks)..." aria-label="Search phrases" />
   </div>
 </header>
 
 <nav class="tabs" id="tabs"></nav>
 
-<main id="main"></main>
+<main id="main">
+  <section class="category active" data-cat="greetings" id="seo-fallback-root">
+    <div class="cat-header">
+      <span class="cat-num">§ 01</span>
+      <h2 class="cat-title">Greetings & Goodbyes</h2>
+      <p class="cat-desc">Open every interaction with warmth — Mexicans appreciate a proper greeting before any request.</p>
+    </div>
+    <div class="grid">
+      <button class="card" data-cat="greetings" data-idx="0">
+        <div class="card-en">Hello / Hi</div>
+        <div class="card-es">Hola</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="1">
+        <div class="card-en">How are you? (formal)</div>
+        <div class="card-es">¿Cómo está?</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="2">
+        <div class="card-en">What's up? (casual)</div>
+        <div class="card-es">¿Qué onda?</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="3">
+        <div class="card-en">Nice to meet you</div>
+        <div class="card-es">Mucho gusto</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="4">
+        <div class="card-en">Welcome</div>
+        <div class="card-es">Bienvenido</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="5">
+        <div class="card-en">Goodbye / See you</div>
+        <div class="card-es">Hasta luego</div>
+      </button>
+    </div>
+  </section>
+</main>
 
 <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
   <div class="modal" id="modal-content"></div>
@@ -550,6 +633,7 @@ const data = [
         en: 'Hello / Hi',
         es: 'Hola',
         pron: 'OH-lah',
+        audio: 'audio/hola.mp3',
         note: 'Universal, works any time of day. Often paired with a time-of-day greeting.',
         followups: [
           { es: 'Hola, buenos días', en: 'Hi, good morning (until ~noon)' },
@@ -561,6 +645,7 @@ const data = [
         en: 'How are you? (formal)',
         es: '¿Cómo está?',
         pron: 'KOH-moh es-TAH',
+        audio: 'audio/como-esta.mp3',
         note: 'Formal "you" — use with elders, strangers, service workers. The polite default in Mexico.',
         followups: [
           { es: '¿Cómo estás?', en: 'How are you? (informal, with peers)' },
@@ -575,6 +660,7 @@ const data = [
         en: "What's up? (casual)",
         es: '¿Qué onda?',
         pron: 'keh OHN-dah',
+        audio: 'audio/que-onda.mp3',
         note: "Distinctly Mexican, used among peers and friends. Very casual — don't use with elders or in formal settings.",
         followups: [
           { es: '¿Qué hubo?', en: "What's up? (also: ¿Quihúbole?)" },
@@ -587,6 +673,7 @@ const data = [
         en: 'Nice to meet you',
         es: 'Mucho gusto',
         pron: 'MOO-choh GOOS-toh',
+        audio: 'audio/mucho-gusto.mp3',
         note: 'Standard introduction. Often shortened to just "Gusto" in casual settings.',
         followups: [
           { es: 'Encantado / Encantada', en: 'Delighted (masculine / feminine)' },
@@ -598,6 +685,7 @@ const data = [
         en: 'Welcome',
         es: 'Bienvenido',
         pron: 'bee-en-veh-NEE-doh',
+        audio: 'audio/bienvenido.mp3',
         note: 'Changes by audience: bienvenido (one man), bienvenida (one woman), bienvenidos (group/mixed), bienvenidas (all women).',
         followups: [
           { es: '¡Bienvenidos a México!', en: 'Welcome to Mexico! (group)' },
@@ -608,6 +696,7 @@ const data = [
         en: 'Goodbye / See you',
         es: 'Hasta luego',
         pron: 'AHS-tah LWEH-goh',
+        audio: 'audio/hasta-luego.mp3',
         note: 'Friendly, neutral farewell. "Adiós" is more final and a bit formal.',
         followups: [
           { es: 'Nos vemos', en: 'See you / see ya' },
@@ -629,6 +718,7 @@ const data = [
         en: 'Please',
         es: 'Por favor',
         pron: 'por fah-VOR',
+        audio: 'audio/por-favor.mp3',
         note: 'Use generously — at the end of nearly every request.',
         followups: [
           { es: 'Sí, por favor', en: 'Yes, please' },
@@ -639,6 +729,7 @@ const data = [
         en: 'Thank you',
         es: 'Gracias',
         pron: 'GRAH-see-as',
+        audio: 'audio/gracias.mp3',
         note: 'Use often. Mexicans tend to thank for everything, big and small.',
         followups: [
           { es: 'Muchas gracias', en: 'Thank you very much' },
@@ -652,6 +743,7 @@ const data = [
         en: 'Excuse me (to ask / get attention)',
         es: 'Disculpe',
         pron: 'dees-COOL-peh',
+        audio: 'audio/disculpe.mp3',
         note: 'Your go-to for asking strangers, waiters, or shop staff a question. Formal version of "disculpa."',
         followups: [
           { es: 'Disculpe, ¿me puede ayudar?', en: 'Excuse me, can you help me?' },
@@ -664,6 +756,7 @@ const data = [
         en: 'Excuse me (passing through)',
         es: 'Con permiso',
         pron: 'kon per-MEE-so',
+        audio: 'audio/con-permiso.mp3',
         note: 'For squeezing past people, leaving a table, or entering a space.',
         followups: [
           { es: 'Con permiso, voy a pasar', en: "Excuse me, I'm going to pass through" },
@@ -674,6 +767,7 @@ const data = [
         en: 'Sorry / Pardon',
         es: 'Perdón',
         pron: 'per-DOHN',
+        audio: 'audio/perdon.mp3',
         note: 'For bumping into someone or apologizing for a small mistake. "Lo siento" is for heavier regret.',
         followups: [
           { es: 'Perdón, no entendí', en: "Sorry, I didn't understand" },
@@ -685,6 +779,7 @@ const data = [
         en: "Pardon? (didn't hear)",
         es: '¿Mande?',
         pron: 'MAHN-deh',
+        audio: 'audio/mande.mp3',
         note: 'Uniquely Mexican way to say "what?" or "pardon?" when you missed something. Locals will appreciate hearing it.',
         followups: [
           { es: '¿Perdón?', en: 'Pardon? (also works)' },
@@ -696,6 +791,7 @@ const data = [
         en: 'No, thank you',
         es: 'No, gracias',
         pron: 'no GRAH-see-as',
+        audio: 'audio/no-gracias.mp3',
         note: 'Polite refusal. A smile + this phrase handles most situations.',
         followups: [
           { es: 'No, gracias, está bien', en: "No thanks, it's fine" },
@@ -714,6 +810,7 @@ const data = [
         en: 'My Spanish is not good',
         es: 'No hablo bien español',
         pron: 'no AH-bloh bee-EN es-pah-NYOL',
+        audio: 'audio/no-hablo-bien-espanol.mp3',
         note: 'A friendly admission that usually invites kindness. The "h" in "hablo" is silent.',
         followups: [
           { es: 'Mi español no es muy bueno', en: "My Spanish isn't very good" },
@@ -727,6 +824,7 @@ const data = [
         en: "Could you speak slower? My Spanish isn't great",
         es: 'Disculpe, hablo poco español. ¿Podría hablar más despacio, por favor?',
         pron: 'dees-COOL-peh · AH-bloh POH-koh es-pah-NYOL · poh-DREE-ah ah-BLAR mahs des-PAH-see-oh, por fah-VOR',
+        audio: 'audio/disculpe-hablo-poco-espanol-podria-hablar-mas-despacio-por-favor.mp3',
         note: 'The full polite combo: lead with "disculpe," explain that you speak only a little, then ask in the conditional ("podría" = "could you" — softer than "puede" = "can you"). Almost everyone will smile and slow down.',
         followups: [
           { es: '¿Podría hablar más despacio, por favor?', en: 'Could you speak more slowly, please? (just the ask)' },
@@ -742,6 +840,7 @@ const data = [
         en: "I don't understand",
         es: 'No entiendo',
         pron: 'no en-tee-EN-doh',
+        audio: 'audio/no-entiendo.mp3',
         note: 'Pair with "disculpe" rather than "lo siento" — it’s lighter and more natural.',
         followups: [
           { es: 'Disculpe, no entiendo', en: "Sorry, I don't understand" },
@@ -756,6 +855,7 @@ const data = [
         en: 'I am from...',
         es: 'Soy de...',
         pron: 'soy deh',
+        audio: 'audio/soy-de.mp3',
         note: "Uses ser (permanent identity) since where you're from is fixed.",
         followups: [
           { es: 'Soy de Texas', en: "I'm from Texas" },
@@ -770,6 +870,7 @@ const data = [
         en: 'Yes / No',
         es: 'Sí / No',
         pron: 'see / no',
+        audio: 'audio/si-no.mp3',
         note: 'Simple, but adding "por favor" or "gracias" makes them feel warm.',
         followups: [
           { es: 'Sí, por favor', en: 'Yes, please' },
@@ -783,6 +884,7 @@ const data = [
         en: "I don't know",
         es: 'No sé',
         pron: 'no SEH',
+        audio: 'audio/no-se.mp3',
         note: "Used for facts/info you don't have. Different from \"no conozco\" (I'm not familiar with).",
         followups: [
           { es: 'No estoy seguro', en: "I'm not sure (masculine)" },
@@ -801,6 +903,7 @@ const data = [
         en: 'Where is the bathroom?',
         es: '¿Dónde está el baño?',
         pron: 'DOHN-deh es-TAH el BAH-nyoh',
+        audio: 'audio/donde-esta-el-bano.mp3',
         note: 'Always polite to lead with "Disculpe."',
         followups: [
           { es: 'Disculpe, ¿dónde está el baño?', en: "Excuse me, where's the bathroom?" },
@@ -813,6 +916,7 @@ const data = [
         en: 'Where is the metro?',
         es: '¿Dónde está el metro?',
         pron: 'DOHN-deh es-TAH el MEH-troh',
+        audio: 'audio/donde-esta-el-metro.mp3',
         note: 'CDMX has an extensive metro. Look for "M" signs.',
         followups: [
           { es: '¿Dónde está la estación?', en: "Where's the station?" },
@@ -826,6 +930,7 @@ const data = [
         en: 'Is there...?',
         es: '¿Hay...?',
         pron: 'eye',
+        audio: 'audio/hay.mp3',
         note: '"Hay" means "there is / there are." Crucial little word for finding things.',
         followups: [
           { es: '¿Hay wifi?', en: 'Is there wifi?' },
@@ -838,6 +943,7 @@ const data = [
         en: 'Where does this go?',
         es: '¿Adónde va esto?',
         pron: 'ah-DOHN-deh va ES-toh',
+        audio: 'audio/adonde-va-esto.mp3',
         note: 'For destinations/movement. "Dónde va esto" works for placement.',
         followups: [
           { es: '¿Dónde pongo esto?', en: 'Where do I put this?' },
@@ -850,6 +956,7 @@ const data = [
         en: "I'm lost",
         es: 'Estoy perdido / perdida',
         pron: 'es-TOY per-DEE-doh / per-DEE-dah',
+        audio: 'audio/estoy-perdido-perdida.mp3',
         note: 'Masculine: perdido. Feminine: perdida. Uses estar (temporary state).',
         followups: [
           { es: 'Estamos perdidos', en: "We're lost" },
@@ -868,6 +975,7 @@ const data = [
         en: 'Table for two, please',
         es: 'Mesa para dos, por favor',
         pron: 'MEH-sah PAH-rah dohs por fah-VOR',
+        audio: 'audio/mesa-para-dos-por-favor.mp3',
         note: 'Swap "dos" for any number. "Una persona" for one.',
         followups: [
           { es: '¿Tiene mesa para dos?', en: 'Do you have a table for two?' },
@@ -881,6 +989,7 @@ const data = [
         en: 'What do you recommend?',
         es: '¿Qué me recomienda?',
         pron: 'keh meh reh-koh-mee-EN-dah',
+        audio: 'audio/que-me-recomienda.mp3',
         note: 'The single best phrase to befriend a waiter. Mention what you like for personalized picks.',
         followups: [
           { es: '¿Cuál es su favorito?', en: "What's your favorite?" },
@@ -895,6 +1004,7 @@ const data = [
         en: 'I would like...',
         es: 'Quisiera...',
         pron: 'kee-see-EH-rah',
+        audio: 'audio/quisiera.mp3',
         note: 'Polite "I would like" — softer than "quiero" (I want). Use at restaurants and shops.',
         followups: [
           { es: 'Quisiera ver el menú', en: "I'd like to see the menu" },
@@ -908,6 +1018,7 @@ const data = [
         en: 'Can I have a large coffee?',
         es: '¿Me puede dar un café grande?',
         pron: 'meh PWEH-deh dar oon kah-FEH GRAHN-deh',
+        audio: 'audio/me-puede-dar-un-cafe-grande.mp3',
         note: 'Spanish doesn’t use "can I have" — say "can you give me" or just "I would like."',
         followups: [
           { es: 'Quisiera un café grande, por favor', en: "I'd like a large coffee, please" },
@@ -923,6 +1034,7 @@ const data = [
         en: 'Without onion / Not spicy',
         es: 'Sin cebolla / Sin picante',
         pron: 'seen seh-BOH-yah / seen pee-KAHN-teh',
+        audio: 'audio/sin-cebolla-sin-picante.mp3',
         note: '"Sin" = without. Useful for any allergy or preference.',
         followups: [
           { es: 'Soy alérgico a...', en: "I'm allergic to... (masculine)" },
@@ -937,6 +1049,7 @@ const data = [
         en: "It's delicious",
         es: 'Está delicioso',
         pron: 'es-TAH deh-lee-see-OH-soh',
+        audio: 'audio/esta-delicioso.mp3',
         note: 'Compliments go a long way. "Rico" also means tasty.',
         followups: [
           { es: 'Todo muy rico', en: "Everything's very tasty" },
@@ -949,6 +1062,7 @@ const data = [
         en: 'The check, please',
         es: 'La cuenta, por favor',
         pron: 'lah KWEN-tah por fah-VOR',
+        audio: 'audio/la-cuenta-por-favor.mp3',
         note: 'Mexicans rarely bring the check unprompted — you usually have to ask.',
         followups: [
           { es: '¿Me trae la cuenta?', en: 'Could you bring the check?' },
@@ -963,6 +1077,7 @@ const data = [
         en: 'Enjoy your meal',
         es: '¡Provecho!',
         pron: 'proh-VEH-choh',
+        audio: 'audio/provecho.mp3',
         note: 'Said when entering or leaving a restaurant where others are eating, or to anyone mid-meal. A warm Mexican custom.',
         followups: [
           { es: '¡Buen provecho!', en: 'Enjoy your meal! (full version)' },
@@ -980,6 +1095,7 @@ const data = [
         en: 'How much does it cost?',
         es: '¿Cuánto cuesta?',
         pron: 'KWAHN-toh KWES-tah',
+        audio: 'audio/cuanto-cuesta.mp3',
         note: 'For one item. Use "cuestan" for multiple.',
         followups: [
           { es: '¿Cuánto cuestan?', en: 'How much do they cost?' },
@@ -993,6 +1109,7 @@ const data = [
         en: 'Do you accept card?',
         es: '¿Aceptan tarjeta?',
         pron: 'ah-SEHP-tahn tar-HEH-tah',
+        audio: 'audio/aceptan-tarjeta.mp3',
         note: 'Cash is still king in many places. Always worth asking first.',
         followups: [
           { es: '¿Puedo pagar con tarjeta?', en: 'Can I pay with card?' },
@@ -1005,6 +1122,7 @@ const data = [
         en: "It's too expensive",
         es: 'Es muy caro',
         pron: 'es mwee KAH-roh',
+        audio: 'audio/es-muy-caro.mp3',
         note: 'Gentle bargaining is welcome at markets, NOT at regular stores or restaurants.',
         followups: [
           { es: '¿Tiene algo más barato?', en: 'Do you have something cheaper?' },
@@ -1017,7 +1135,8 @@ const data = [
       {
         en: "I'm just looking",
         es: 'Solo estoy viendo',
-        pron: 'SOH-loh es-TOY vee-EN-doh',
+        pron: 'SOH-lol es-TOY vee-EN-doh',
+        audio: 'audio/solo-estoy-viendo.mp3',
         note: 'Polite way to browse without committing.',
         followups: [
           { es: 'Solo estoy mirando', en: "I'm just looking (alternative)" },
@@ -1035,6 +1154,7 @@ const data = [
         en: 'To be (states/location) — ESTAR',
         es: 'Estoy / Está / Están',
         pron: 'es-TOY / es-TAH / es-TAHN',
+        audio: 'audio/estoy-esta-estan.mp3',
         note: 'For temporary states, feelings, locations. "Estoy cansado" = I’m tired.',
         followups: [
           { es: 'Estoy bien', en: "I'm fine" },
@@ -1047,6 +1167,7 @@ const data = [
         en: 'To be (identity) — SER',
         es: 'Soy / Es / Son',
         pron: 'soy / es / sohn',
+        audio: 'audio/soy-es-son.mp3',
         note: 'For permanent identity, traits, origin. "Soy de Texas" = I’m from Texas.',
         followups: [
           { es: 'Soy Zachary', en: "I'm Zachary" },
@@ -1059,6 +1180,7 @@ const data = [
         en: 'To have — TENER',
         es: 'Tengo / Tiene',
         pron: 'TEN-go / tee-EH-neh',
+        audio: 'audio/tengo-tiene.mp3',
         note: 'Also used for hunger, thirst, age in Spanish: "tengo hambre" = I’m hungry.',
         followups: [
           { es: 'Tengo hambre', en: "I'm hungry" },
@@ -1072,6 +1194,7 @@ const data = [
         en: 'To want — QUERER',
         es: 'Quiero / Quiere',
         pron: 'kee-EH-roh / kee-EH-reh',
+        audio: 'audio/quiero-quiere.mp3',
         note: '"Quisiera" is the polite "I would like" version — preferred for service.',
         followups: [
           { es: 'Quiero un café', en: 'I want a coffee' },
@@ -1083,6 +1206,7 @@ const data = [
         en: 'To go — IR',
         es: 'Voy / Va / Vamos',
         pron: 'voy / vah / VAH-mohs',
+        audio: 'audio/voy-va-vamos.mp3',
         note: '"Vamos" can also mean "let’s go!"',
         followups: [
           { es: 'Voy al mercado', en: "I'm going to the market" },
@@ -1094,6 +1218,7 @@ const data = [
         en: 'To be able to — PODER',
         es: 'Puedo / Puede',
         pron: 'PWEH-doh / PWEH-deh',
+        audio: 'audio/puedo-puede.mp3',
         note: 'Foundation of polite requests: "¿Me puede...?" = Can you...?',
         followups: [
           { es: '¿Me puede ayudar?', en: 'Can you help me?' },
@@ -1105,6 +1230,7 @@ const data = [
         en: 'To like — GUSTAR',
         es: 'Me gusta / Le gusta',
         pron: 'meh GOOS-tah / leh GOOS-tah',
+        audio: 'audio/me-gusta-le-gusta.mp3',
         note: 'Works backwards: literally "it pleases me." Use "gustan" for plural things.',
         followups: [
           { es: 'Me gusta', en: 'I like it' },
@@ -1117,6 +1243,7 @@ const data = [
         en: 'To need — NECESITAR',
         es: 'Necesito',
         pron: 'neh-seh-SEE-toh',
+        audio: 'audio/necesito.mp3',
         note: 'Direct and clear for any need.',
         followups: [
           { es: 'Necesito ayuda', en: 'I need help' },
@@ -1148,6 +1275,7 @@ const data = [
         en: 'How are you? (formal)',
         es: '¿Cómo está?',
         pron: 'KOH-moh es-TAH',
+        audio: 'audio/como-esta.mp3',
         note: 'Compare: ¿Cómo estás? (informal) vs ¿Cómo está? (formal — drop the s).',
         followups: [
           { es: '¿Cómo está usted?', en: 'How are you? (extra clear)' },
@@ -1158,6 +1286,7 @@ const data = [
         en: 'Do you speak English? (formal)',
         es: '¿Habla inglés?',
         pron: 'AH-blah een-GLEHS',
+        audio: 'audio/habla-ingles.mp3',
         note: 'Informal: ¿Hablas inglés? Formal: ¿Habla inglés?',
         followups: [
           { es: '¿Entiende?', en: 'Do you understand? (formal)' },
@@ -1169,6 +1298,7 @@ const data = [
         en: 'Can you help me? (formal)',
         es: '¿Me puede ayudar?',
         pron: 'meh PWEH-deh ah-yoo-DAR',
+        audio: 'audio/me-puede-ayudar.mp3',
         note: 'Adding "Disculpe" before makes it extra polite.',
         followups: [
           { es: 'Disculpe, ¿me puede ayudar?', en: 'Excuse me, can you help me?' },
@@ -1180,6 +1310,7 @@ const data = [
         en: 'You are very kind',
         es: 'Es muy amable',
         pron: 'es mwee ah-MAH-bleh',
+        audio: 'audio/es-muy-amable.mp3',
         note: 'Common, gracious response when someone helps you. Replaces "eres muy amable."',
         followups: [
           { es: 'Muchas gracias, muy amable', en: 'Thank you very much, very kind' },
@@ -1197,6 +1328,7 @@ const data = [
         en: '"Wow" / "Right on" / "Let’s go"',
         es: 'Órale',
         pron: 'OH-rah-leh',
+        audio: 'audio/orale.mp3',
         note: 'The Swiss Army knife of Mexican slang. Means "wow," "okay," "alright," "let’s go," depending on tone.',
         followups: [
           { es: '¡Órale!', en: 'Wow! / Whoa!' },
@@ -1208,6 +1340,7 @@ const data = [
         en: 'Cool / Awesome',
         es: 'Padre / Chido',
         pron: 'PAH-dreh / CHEE-doh',
+        audio: 'audio/padre-chido.mp3',
         note: '"Padre" literally means "father" but colloquially means "cool" in Mexico. "Chido" is the most common slang for cool.',
         followups: [
           { es: '¡Qué padre!', en: 'How cool!' },
@@ -1219,6 +1352,7 @@ const data = [
         en: 'Okay / Deal',
         es: 'Sale',
         pron: 'SAH-leh',
+        audio: 'audio/sale.mp3',
         note: 'Casual Mexican "okay" or "sounds good" — like sealing a small agreement.',
         followups: [
           { es: 'Sale, vamos', en: "Okay, let's go" },
@@ -1229,6 +1363,7 @@ const data = [
         en: 'Right now (kind of)',
         es: 'Ahorita',
         pron: 'ah-oh-REE-tah',
+        audio: 'audio/ahorita.mp3',
         note: 'Famously elastic. Can mean "in a minute," "later today," or "eventually." Context (and tone) is everything.',
         followups: [
           { es: 'Ahorita vengo', en: "I'll be right back (...maybe)" },
@@ -1241,6 +1376,7 @@ const data = [
         en: 'A little (something)',
         es: 'Un poquito',
         pron: 'oon poh-KEE-toh',
+        audio: 'audio/un-poquito.mp3',
         note: 'Diminutive of "poco." Sounds friendlier and more humble.',
         followups: [
           { es: 'Hablo un poquito de español', en: 'I speak a little bit of Spanish' },
@@ -1252,6 +1388,7 @@ const data = [
         en: 'Enjoy your meal',
         es: '¡Provecho!',
         pron: 'proh-VEH-choh',
+        audio: 'audio/provecho.mp3',
         note: 'Saying this to people eating as you walk past is genuinely Mexican and warmly received.',
         followups: [
           { es: '¡Buen provecho!', en: 'Enjoy your meal!' },
@@ -1269,6 +1406,7 @@ const data = [
         en: 'Help!',
         es: '¡Ayuda!',
         pron: 'ah-YOO-dah',
+        audio: 'audio/ayuda.mp3',
         note: 'Universal call. "Socorro" is more dramatic but also understood.',
         followups: [
           { es: '¡Socorro!', en: 'Help! (more urgent)' },
@@ -1281,6 +1419,7 @@ const data = [
         en: 'I lost my...',
         es: 'Perdí mi...',
         pron: 'per-DEE mee',
+        audio: 'audio/perdi-mi.mp3',
         note: 'For lost items — phone, wallet, passport.',
         followups: [
           { es: 'Perdí mi pasaporte', en: 'I lost my passport' },
@@ -1293,6 +1432,7 @@ const data = [
         en: 'I need a doctor',
         es: 'Necesito un doctor',
         pron: 'neh-seh-SEE-toh oon dohk-TOR',
+        audio: 'audio/necesito-un-doctor.mp3',
         note: 'Or "médico." Both work everywhere.',
         followups: [
           { es: 'Necesito un médico', en: 'I need a doctor' },
@@ -1306,6 +1446,7 @@ const data = [
         en: 'Where is the US embassy?',
         es: '¿Dónde está la embajada de Estados Unidos?',
         pron: 'DOHN-deh es-TAH lah em-bah-HAH-dah deh es-TAH-dohs oo-NEE-dohs',
+        audio: 'audio/donde-esta-la-embajada-de-estados-unidos.mp3',
         note: 'The US Embassy is in Mexico City; consulates in many major cities.',
         followups: [
           { es: 'Necesito ir al consulado', en: 'I need to go to the consulate' },
@@ -1320,6 +1461,44 @@ const data = [
 // ==================== STATE ====================
 let activeCategory = data[0].id;
 let isSearching = false;
+
+// ==================== AUDIO PLAYER FUNCTION ====================
+let currentAudio = null;
+
+function playAudio(text, explicitFilename) {
+  try {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    let fileName = '';
+    
+    if (explicitFilename) {
+      fileName = explicitFilename.replace(/\\/g, '/');
+      if (fileName.startsWith('audio/')) {
+        fileName = fileName.substring(6);
+      }
+    } else {
+      let clean = text.split('→').pop().trim();
+      clean = clean.toLowerCase();
+      clean = clean.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      clean = clean.replace(/[¿¡?!,.:;()\/_]/g, "");
+      clean = clean.replace(/\s+/g, '-');
+      clean = clean.replace(/^-+|-+$/g, '');
+      fileName = clean + '.mp3';
+    }
+
+    const audioUrl = './audio/' + fileName;
+
+    currentAudio = new Audio(audioUrl);
+    currentAudio.play().catch(err => {
+      console.warn("Audio target asset missing or interaction context blocked playback: " + audioUrl, err);
+    });
+  } catch (error) {
+    console.error("Audio engine player encountered an anomaly:", error);
+  }
+}
 
 // ==================== RENDER ====================
 const tabsEl = document.getElementById('tabs');
@@ -1437,7 +1616,7 @@ function openModal(phrase, cat) {
       <button class="modal-close" id="close-btn" aria-label="Close">×</button>
       <div class="modal-en">${cat.title} · ${phrase.en}</div>
       <div class="modal-es">${phrase.es}</div>
-      ${phrase.pron ? `<div class="modal-pron">${phrase.pron}</div>` : ''}
+      ${phrase.pron ? `<div class="modal-pron" title="Click to listen">${phrase.pron}</div>` : ''}
     </div>
     <div class="modal-body">
       ${phrase.note ? `
@@ -1461,11 +1640,29 @@ function openModal(phrase, cat) {
   modalEl.classList.add('active');
   document.body.style.overflow = 'hidden';
   document.getElementById('close-btn').addEventListener('click', closeModal);
+
+  const pronEl = modalContent.querySelector('.modal-pron');
+  if (pronEl) {
+    pronEl.addEventListener('click', () => {
+      playAudio(phrase.es, phrase.audio);
+    });
+  }
+
+  modalContent.querySelectorAll('.followup').forEach(item => {
+    item.addEventListener('click', (e) => {
+      const esText = item.querySelector('.followup-es').textContent;
+      playAudio(esText);
+    });
+  });
 }
 
 function closeModal() {
   modalEl.classList.remove('active');
   document.body.style.overflow = '';
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
 }
 
 modalEl.addEventListener('click', (e) => {
@@ -1482,6 +1679,7 @@ searchEl.addEventListener('input', (e) => {
 });
 
 // ==================== INIT ====================
+// Pre-render simulation handles initial mount without layout shifting
 renderTabs();
 renderMain();
 </script>
