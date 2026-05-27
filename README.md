@@ -34,7 +34,7 @@ src/
   main.ts        # bootstrap + cross-module wiring
   layout.ts      # static page chrome (header, legend, footer)
   map.ts         # Leaflet base + tiles + bounds
-  zones.ts      # GeoJSON layer + select state
+  zones.ts       # GeoJSON layer + select state
   pins.ts        # DivIcon marker layer + select state
   sidebar.ts     # detail panel renderer
   geolocate.ts   # watchPosition + user marker
@@ -45,6 +45,7 @@ public/
   icon.svg, icon-maskable.svg
   data/zones.geojson  # 12 hand-traced colonia polygons
   data/pins.json      # 18 landmarks
+  audio/              # native audio pronunciation assets
 ```
 
 ## Editing content
