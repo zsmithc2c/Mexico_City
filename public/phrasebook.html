@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light only" />
 <meta name="supported-color-schemes" content="light" />
-<title>Zachary's Mexico Spanish Guide</title>
+<title>Mexican Spanish Phrasebook & Travel Guide | Zachary's Pocket Guide</title>
+<meta name="description" content="Master native-friendly Mexican Spanish with our interactive phrasebook. Learn local slang, restaurant etiquette, polite greetings, and essential travel verbs." />
 <link rel="icon" type="image/svg+xml" href="./icon.svg" />
 <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
 <meta name="theme-color" content="#b03515" />
@@ -509,6 +510,47 @@
   ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you use formal Greetings & Goodbyes in Mexican Spanish?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Mexico, open interactions with a formal title like '¿Cómo está?' or 'Hola, buenos días'. Defaulting to formal pronouns (usted) shows good manners with elders and service workers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does '¿Mande?' mean in Mexico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "'¿Mande?' is a uniquely Mexican phrase used to say 'pardon?' or 'what?' when you missed something. It is highly valued by locals as a respectful way to ask for repetition."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you ask for the bill at a Mexican restaurant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Say 'La cuenta, por favor'. Waiters in Mexico rarely bring the check to your table unprompted, so you must explicitly ask for it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Mexican slang word 'Órale' mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "'Órale' is a multipurpose Mexican word that can mean 'wow', 'okay', 'alright', or 'let's go', depending completely on your tone of voice."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -528,13 +570,47 @@
 
   <div class="search-wrap">
     <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-    <input type="text" class="search" id="search" placeholder="Search phrases (e.g. coffee, bathroom, thanks)..." />
+    <input type="text" class="search" id="search" placeholder="Search phrases (e.g. coffee, bathroom, thanks)..." aria-label="Search phrases" />
   </div>
 </header>
 
 <nav class="tabs" id="tabs"></nav>
 
-<main id="main"></main>
+<main id="main">
+  <section class="category active" data-cat="greetings" id="seo-fallback-root">
+    <div class="cat-header">
+      <span class="cat-num">§ 01</span>
+      <h2 class="cat-title">Greetings & Goodbyes</h2>
+      <p class="cat-desc">Open every interaction with warmth — Mexicans appreciate a proper greeting before any request.</p>
+    </div>
+    <div class="grid">
+      <button class="card" data-cat="greetings" data-idx="0">
+        <div class="card-en">Hello / Hi</div>
+        <div class="card-es">Hola</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="1">
+        <div class="card-en">How are you? (formal)</div>
+        <div class="card-es">¿Cómo está?</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="2">
+        <div class="card-en">What's up? (casual)</div>
+        <div class="card-es">¿Qué onda?</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="3">
+        <div class="card-en">Nice to meet you</div>
+        <div class="card-es">Mucho gusto</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="4">
+        <div class="card-en">Welcome</div>
+        <div class="card-es">Bienvenido</div>
+      </button>
+      <button class="card" data-cat="greetings" data-idx="5">
+        <div class="card-en">Goodbye / See you</div>
+        <div class="card-es">Hasta luego</div>
+      </button>
+    </div>
+  </section>
+</main>
 
 <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true">
   <div class="modal" id="modal-content"></div>
@@ -1391,7 +1467,6 @@ let currentAudio = null;
 
 function playAudio(text, explicitFilename) {
   try {
-    // Cut off overlapping audio playbacks instantly
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
@@ -1399,24 +1474,21 @@ function playAudio(text, explicitFilename) {
 
     let fileName = '';
     
-    // If an explicit audio filename is supplied, sanitize and use it
     if (explicitFilename) {
       fileName = explicitFilename.replace(/\\/g, '/');
       if (fileName.startsWith('audio/')) {
-        fileName = fileName.substring(6); // Extract trailing filename
+        fileName = fileName.substring(6);
       }
     } else {
-      // Derive clean, url-safe identifier slugs dynamically from the phrase text
       let clean = text.split('→').pop().trim();
       clean = clean.toLowerCase();
-      clean = clean.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Strip accent characters
-      clean = clean.replace(/[¿¡?!,.:;()\/_]/g, "");                 // Remove grammar punctuation
-      clean = clean.replace(/\s+/g, '-');                            // Swap internal spacing for clean hyphens
-      clean = clean.replace(/^-+|-+$/g, '');                         // Strip trailing or leading hyphens
+      clean = clean.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      clean = clean.replace(/[¿¡?!,.:;()\/_]/g, "");
+      clean = clean.replace(/\s+/g, '-');
+      clean = clean.replace(/^-+|-+$/g, '');
       fileName = clean + '.mp3';
     }
 
-    // Combine with the proper local path syntax relative to your public asset framework
     const audioUrl = './audio/' + fileName;
 
     currentAudio = new Audio(audioUrl);
@@ -1569,7 +1641,6 @@ function openModal(phrase, cat) {
   document.body.style.overflow = 'hidden';
   document.getElementById('close-btn').addEventListener('click', closeModal);
 
-  // Hook up event listeners to pronunciation text/icon wrapper
   const pronEl = modalContent.querySelector('.modal-pron');
   if (pronEl) {
     pronEl.addEventListener('click', () => {
@@ -1577,7 +1648,6 @@ function openModal(phrase, cat) {
     });
   }
 
-  // Hook up individual follow-up phrase clicking to play localized audio assets
   modalContent.querySelectorAll('.followup').forEach(item => {
     item.addEventListener('click', (e) => {
       const esText = item.querySelector('.followup-es').textContent;
@@ -1589,7 +1659,6 @@ function openModal(phrase, cat) {
 function closeModal() {
   modalEl.classList.remove('active');
   document.body.style.overflow = '';
-  // Mute audio instantly when user cancels out of the viewport modal
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
@@ -1610,6 +1679,7 @@ searchEl.addEventListener('input', (e) => {
 });
 
 // ==================== INIT ====================
+// Pre-render simulation handles initial mount without layout shifting
 renderTabs();
 renderMain();
 </script>
